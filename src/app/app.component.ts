@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TodoComponent } from './MyComponent/todo/todo.component';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'cwh-todo-list1';
+  constructor(){
+    // setTimeout(() => {
+    //   this.title = "Changed the title";
+    // }, 5000);
+  }
+  
 }
