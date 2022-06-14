@@ -31,7 +31,7 @@ export class ApiService {
     }
   
   updateimdbratingdata(postdata: Object, id: number){
-    let endPoints = "imdbrating/" + id;
+    let endPoints = "imdbrating/" + id +"/";
     return this.http.put(this.url+endPoints, postdata); 
     }
 
