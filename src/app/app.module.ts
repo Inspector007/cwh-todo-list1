@@ -12,6 +12,7 @@ import { AboutComponent } from './MyComponent/about/about.component';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { ImdbratingComponent } from './MyComponent/imdbrating/imdbrating.component';
+import { ImdbUpdateComponent } from './MyComponent/imdb-update/imdb-update.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { ImdbratingComponent } from './MyComponent/imdbrating/imdbrating.compone
     TodoAddComponent,
     AboutComponent,
     HomeComponent,
-    ImdbratingComponent
+    ImdbratingComponent,
+    ImdbUpdateComponent
   ],
   imports: [
     HttpClientModule,
@@ -30,6 +32,7 @@ import { ImdbratingComponent } from './MyComponent/imdbrating/imdbrating.compone
     AppRoutingModule,
     FormsModule,
     RouterModule.forRoot([
+      {path: 'update-imdb/:id', component: ImdbUpdateComponent},
       {path: 'imdbrating', component: ImdbratingComponent},
       {path: 'about', component: AboutComponent},
       {path: 'todo', component: TodoComponent},

@@ -15,6 +15,11 @@ export class ApiService {
   getimdbratingretrievedata(){
     return this.http.get(this.url+'imdbratingretrieve/'); 
     }
+
+  getimdbratingbyid(id: number){
+    let endPoints = "imdbrating/" + id;
+    return this.http.get(this.url+endPoints); 
+    }
   
   addimdbratingdata(postdata: Object){
     return this.http.post(this.url+'imdbrating/', postdata); 
@@ -25,8 +30,9 @@ export class ApiService {
     return this.http.delete(this.url+endPoints); 
     }
   
-  updateimdbratingdata(postdata: Object){
-    return this.http.put(this.url+'imdbrating/', postdata); 
+  updateimdbratingdata(postdata: Object, id: number){
+    let endPoints = "imdbrating/" + id;
+    return this.http.put(this.url+endPoints, postdata); 
     }
 
 }
