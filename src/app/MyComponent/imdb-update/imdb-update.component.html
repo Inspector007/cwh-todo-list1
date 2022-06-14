@@ -1,0 +1,25 @@
+<h1>Code with Deepak</h1>
+<form (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="popularity_99" class="form-label">Add popularity_99</label>
+      <input type="number" class="form-control" [(ngModel)]="popularity_99" name="popularity_99" id="popularity_99" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <label for="director" class="form-label">Director</label>
+      <input type="text" class="form-control" [(ngModel)]="director" name="director" id="director">
+    </div>
+    <div class="mb-3">
+        <label for="genre" class="form-label">Genre</label>
+        <input type="text" class="form-control" [(ngModel)]="genre" name="genre" id="genre">
+    </div>
+    <div class="mb-3">
+        <label for="imdb_score" class="form-label">Imdb Score</label>
+        <input type="number" class="form-control" [(ngModel)]="imdb_score" name="imdb_score" id="imdb_score">
+    </div>
+    <div class="mb-3">
+        <label for="name" class="form-label">Add Description</label>
+        <input type="text" class="form-control" [(ngModel)]="name" name="name" id="name">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
